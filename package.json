@@ -1,6 +1,6 @@
 {
   "name": "@yao-react/use-reduce-callback",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "React hook to reduce callback invocations.",
   "keywords": [
     "react",
