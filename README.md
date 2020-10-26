@@ -17,15 +17,15 @@ yarn add @yao-react/use-reduce-callback
 ```tsx
 export const Demo = () => {
   const [
-    logs, // returned acc
-    handleInputChange, // returned handler
+    logs, // output acc
+    handleInputChange, // output handler
   ] = useReduceCallback(
-    // arg reduce
+    // input reduce
     (acc: string[], e: ChangeEvent<HTMLInputElement>) => [
       ...acc,
       e.target.value,
     ],
-    [] // arg initAcc
+    [] // input initAcc
   );
   return (
     <div>
@@ -57,6 +57,6 @@ Outputs
 
 ## More words
 
-- The returned `acc` will be re-initialized if `deps` changes
-- The returned `acc` will **not** be re-initialized if `initAcc` changes
-- The returned `hander` will change if arg `reduce` changes
+- The output `acc` will refresh if `deps` changes
+- The output `acc` will **not** refresh `initAcc` changes
+- The output `hander` will refresh if arg `reduce` changes
